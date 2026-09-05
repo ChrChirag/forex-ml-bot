@@ -108,8 +108,8 @@ python train_model.py  # retrain with expanded dataset
 
 | Pair | AUC | Threshold | Notes |
 |------|-----|-----------|-------|
-| EUR/USD | 0.538 | 0.70 | Improving — ~6 weeks live data |
-| AUD/USD | 0.601 | 0.51 | Best model — more active in Asian session |
+| EUR/USD | 0.538 | 0.70 | Improving = 10 weeks live data |
+| AUD/USD | 0.601 | 0.51 | Best model = more active in Asian session |
 
 AUC of 0.5 = random. Both models are above random and improving as 
 live trade data accumulates. The infrastructure is the foundation — 
