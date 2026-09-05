@@ -1,0 +1,11 @@
+.env
+venv/
+models/
+training_data/
+signal_log.csv
+bot.log
+__pycache__/
+*.pyc
+*.pyo
+.env.example.bak
+debug.py
