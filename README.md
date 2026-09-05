@@ -13,7 +13,7 @@ Every 15 minutes the bot:
 1. Fetches live EUR/USD and AUD/USD price data from IBKR
 2. Computes EMA(9/21) and RSI(14) indicators
 3. Generates a BUY, SELL, or HOLD signal
-4. Passes the signal through an XGBoost classifier — only trades with 
+4. Passes the signal through an XGBoost classifier, only trades with 
    predicted win probability above a calibrated threshold are approved
 5. Places a bracket order (entry + take-profit + stop-loss) via the IBKR API
 6. Enforces a daily P&L cap that halts trading if gains or losses 
@@ -36,13 +36,13 @@ Order Engine → IBKR CFD
 
 ## Stack
 
-- **Python** — core language
-- **ib_insync** — Interactive Brokers API wrapper
-- **XGBoost** — signal confidence classifier
-- **stable-baselines3** — PPO-based RL exit manager (framework built, 
+- **Python** = core language
+- **ib_insync** = Interactive Brokers API wrapper
+- **XGBoost** = signal confidence classifier
+- **stable-baselines3** = PPO-based RL exit manager (framework built, 
   activates once sufficient live data accumulates)
-- **yfinance** — historical data for backtesting and training
-- **pandas / numpy** — data processing
+- **yfinance** = historical data for backtesting and training
+- **pandas / numpy** = data processing
 
 ## File structure
 
